@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +13,11 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [\App\Http\Controllers\MasjidController::class, 'welcome']);
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
@@ -24,12 +25,15 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Auth::routes();
 
-Route::get('/home', function() {
+Route::get('/home', function () {
     return view('home');
 })->name('home')->middleware('auth');
 
+// Route::resource('sekolahs', \App\Http\Controllers\SekolahController::class)
+//     ->middleware('auth');
 
+Route::resource('masjids', \App\Http\Controllers\MasjidController::class)
+    ->middleware('auth');
 
-Route::resource('sekolahs',\App\Http\Controllers\SekolahController::class)->middleware('auth');
-Route::resource('polygons',\App\Http\Controllers\PolygonSekolahController::class)->middleware('auth');
-Route::resource('polylines',\App\Http\Controllers\PolylineSekolahController::class)->middleware('auth');
+    Route::get('/maps', [\App\Http\Controllers\MasjidController::class, 'map'])
+    ->middleware('auth');

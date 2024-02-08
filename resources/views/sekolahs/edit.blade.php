@@ -29,7 +29,7 @@
                         <table style="width: 100%;">
                             <tr>
                                 <td><label for="labelNama">Nama Sekolah</label></td>
-                                <td><input type="text" size="70" id="InputNama" placeholder="" name="nama_sekolah" value="{{$sekolah->nama_sekolah}}"></td>
+                                <td><input type="text" size="70" id="InputNama" placeholder="" name="namasekolah" value="{{$sekolah->namasekolah}}"></td>
                             </tr>
                             <tr>
                                 <td><label for="labelAlamat">Alamat</label></td>

@@ -303,20 +303,25 @@ return [
 
         // Sidebar items:
         [
-            'text' => 'Data Sekolah',
-            'url' => '/sekolahs',
-            'icon' => 'far fa-fw fa-file',
+            'text' => 'Data Masjid',
+            'url'  => '/masjids',
+            'icon' => 'far fa-fw fa-building',
         ],
         [
-            'text' => 'Polygon Sekolah',
-            'url'  => '/polygons',
-            'icon'  => 'far fa-fw fa-file',
+            'text' => 'Map Masjid',
+            'url'  => '/maps',
+            'icon' => 'far fa-fw fa-map',
         ],
-        [
-            'text' => 'Polyline Sekolah',
-            'url'  => '/polylines',
-            'icon'  => 'far fa-fw fa-file',
-        ],
+
+        // [
+        //     'text' => 'Data Sekolah',
+        //     'url'  => '/sekolahs',
+        //     'icon' => 'far fa-fw fa-file',
+        // ],
+        // [
+        //     'type' => 'sidebar-menu-search',
+        //     'text' => 'search',
+        // ],
         // [
         //     'text' => 'blog',
         //     'url'  => 'admin/blog',

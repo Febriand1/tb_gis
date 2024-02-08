@@ -27,7 +27,7 @@
                         <tbody>
                             @foreach ($sekolahs as $key => $sekolah)
                                 <tr>
-                                    <td>{{ $sekolah->nama_sekolah }}</td>
+                                    <td>{{ $sekolah->namasekolah }}</td>
                                     <td>{{ $sekolah->alamat }}</td>
                                     <td>{{ $sekolah->latitude }}</td>
                                     <td>{{ $sekolah->longitude }}</td>
